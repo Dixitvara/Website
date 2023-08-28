@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans+Narrow&display=swap');
+
+:root{
+    --black: #000000;
+    --red: red;
+    --white: #fff;
+    --headingFont : 'Poppins', sans-serif;
+    --ubuntu: 'Ubuntu', sans-serif;
+    --textFont: 'PT Sans Narrow', sans-serif;
+    --shadow-color: #e39da5;
+}
+
+body{
+    background-color: #212121;
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+/* Nav css */
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90vw;
+    height: 10vh;
+    margin: auto;
+}
+
+ul{
+    display: flex;
+    gap: 5rem;
+    width: 30vw;
+    list-style: none;
+}
+
+ul a{
+    text-decoration: none;
+    color: var(--white);
+    letter-spacing: 2px;
+    font-family: var(--textFont);
+}
+
+.heading h2{
+    font-family: var(--headingFont);
+    margin: 5vw;
+    font-weight: bolder;
+    letter-spacing: 1vw;
+    color: var(--white);
+}
+
+/* Hero section CSS */
+
+.hero{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 90vw;
+    margin: auto;
+    margin-top: 30vh;
+}
+
+.introImg img{
+    height: 80%;
+    position: absolute;
+    left: 68%;
+    bottom: 0;
+    transform: translate(-50%);
+    transition: bottom 1s, left 1s;
+}
+
+.introImg img:hover{
+    left: 66%;
+}
+
+.introText .head{
+    font-family : var(--ubuntu);
+    font-size: 3rem;
+    letter-spacing: 5px;
+    margin-bottom: 4vh;
+    color: var(--white);
+    text-shadow: 0px 3px 10px var(--shadow-color);
+}
+
+.vala{
+    color: var(--shadow-color);
+}
+
+.introText .para{
+    font-size: 1.2rem;
+    color: var(--white);
+    margin-bottom: 4vh;
+    width: 30vw;
+    font-family: var(--textFont);
+    letter-spacing: 2px;
+}
+
+#btn{
+    padding: .9rem;
+    font-size: 1rem;
+    border-radius: 1rem;
+    background-color: var(--white);
+    box-shadow: 0px 0px 10px var(--shadow-color);
+    text-decoration: none;
+    color: inherit;
+}
+
+#btn:hover{
+    transition: ease-in-out .2s;
+    box-shadow: 0px 0px 13px var(--shadow-color);
+}
+
+.introImg{
+    width: 24rem;
+}
+
+.shape{
+    width: 30vw;
+    height: 60vh;
+    background-color:  var(--white);
+    position: absolute;
+    border-radius: 56% 44% 70% 30% / 30% 54% 46% 70%;
+    box-shadow: 0 0 30px 10px var(--shadow-color);
+    bottom: 12%;
+    right: 18%;
+    z-index: -1;
+    animation: water-wave 4s linear infinite;
+}
+
+@keyframes water-wave{
+    0%{
+        border-radius: 36% 64% 18% 82% / 34% 44% 56% 66%;
+    }
+    25%{
+        border-radius: 81% 19% 50% 50% / 32% 57% 43% 68%;
+    }
+    50%{
+        border-radius: 85% 15% 85% 15% / 18% 74% 26% 82%;
+    }
+    75%{
+        border-radius: 82% 18% 90% 10% / 17% 84% 16% 83%; 
+    }
+    100%{
+        border-radius: 36% 64% 18% 82% / 34% 44% 56% 66%;
+    }
+}
