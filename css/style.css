@@ -1,25 +1,27 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=PT+Sans+Narrow&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 :root{
-    --black: #000000;
+    --logo: #000000;
     --red: red;
     --white: #fff;
-    --headingFont : 'Poppins', sans-serif;
+	--poppins: 'Poppins', sans-serif;
+    --headingFont : 'Arial', sans-serif;
     --ubuntu: 'Ubuntu', sans-serif;
-    --textFont: 'PT Sans Narrow', sans-serif;
-    --shadow-color: #e39da5;
+    --shadow-color: #ADA9E4;
+    --bg-color: #001C30;
 }
 
 body{
-    background-color: #212121;
+    background-color: var(--bg-color);
+	
 }
 
 *{
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
+	font-family: var(--poppins);
 }
 
 /* Nav css */
@@ -28,14 +30,15 @@ nav{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 90vw;
-    height: 10vh;
+    width: 92vw;
+    height: 12vh;
     margin: auto;
+    /* background-color: var(--red); */
 }
 
 ul{
     display: flex;
-    gap: 5rem;
+    gap: 4rem;
     width: 30vw;
     list-style: none;
 }
@@ -44,15 +47,12 @@ ul a{
     text-decoration: none;
     color: var(--white);
     letter-spacing: 2px;
-    font-family: var(--textFont);
 }
 
 .heading h2{
-    font-family: var(--headingFont);
-    margin: 5vw;
-    font-weight: bolder;
-    letter-spacing: 1vw;
+    font-family: var(--poppins);
     color: var(--white);
+	font-size: 2.5rem;
 }
 
 /* Hero section CSS */
@@ -61,58 +61,57 @@ ul a{
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    width: 90vw;
+    width: 92vw;
     margin: auto;
-    margin-top: 30vh;
+    margin-top: 15vh;
 }
 
-.introImg img{
-    height: 80%;
-    position: absolute;
-    left: 68%;
-    bottom: 0;
-    transform: translate(-50%);
-    transition: bottom 1s, left 1s;
-}
-
-.introImg img:hover{
-    left: 66%;
+.greet{
+	font-size: 1.9rem;
+	color: var(--white);
+	font-weight: 400;
 }
 
 .introText .head{
-    font-family : var(--ubuntu);
-    font-size: 3rem;
+    font-family : var(--poppins);
+    font-size: 4rem;
     letter-spacing: 5px;
-    margin-bottom: 4vh;
+    margin-bottom: 1vh;
     color: var(--white);
-    text-shadow: 0px 3px 10px var(--shadow-color);
 }
 
-.vala{
+.dixit{
     color: var(--shadow-color);
+	font-family: var(--poppins);
+	font-weight: 700;
+}
+
+#element{
+	color: var(--shadow-color);
+	font-weight: 500;
 }
 
 .introText .para{
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     color: var(--white);
     margin-bottom: 4vh;
     width: 30vw;
-    font-family: var(--textFont);
-    letter-spacing: 2px;
+    font-family: var(--poppins);
+	display: block;
 }
 
 #btn{
-    padding: .9rem;
+    padding: .8rem;
     font-size: 1rem;
     border-radius: 1rem;
     background-color: var(--white);
-    box-shadow: 0px 0px 10px var(--shadow-color);
     text-decoration: none;
     color: inherit;
+    transition: all ease-in-out .2s;
+	display: inline-block;
 }
 
 #btn:hover{
-    transition: ease-in-out .2s;
     box-shadow: 0px 0px 13px var(--shadow-color);
 }
 
@@ -121,32 +120,41 @@ ul a{
 }
 
 .shape{
-    width: 30vw;
-    height: 60vh;
-    background-color:  var(--white);
-    position: absolute;
-    border-radius: 56% 44% 70% 30% / 30% 54% 46% 70%;
-    box-shadow: 0 0 30px 10px var(--shadow-color);
-    bottom: 12%;
-    right: 18%;
-    z-index: -1;
-    animation: water-wave 4s linear infinite;
+    width: 60vw;
+    height: 105vh;
+    background-color:  #176B87;
+	position: absolute;
+    top: -5%;
+	left: 55%;
+	border-radius: 89% 11% 54% 46% / 50% 100% 0% 50%;
+	z-index: -1;
+	overflow-x: hidden;
+}
+
+.img{
+	position: absolute;
+	bottom: 0%;
+	left: 55%;
+	width: 50vw;
+	height: 112vh;
+	background-image: url(../img/photomin.png);
+	background-size: cover;
 }
 
 @keyframes water-wave{
     0%{
-        border-radius: 36% 64% 18% 82% / 34% 44% 56% 66%;
+        border-radius: 48% 52% 70% 30% / 33% 49% 51% 67%;
     }
     25%{
-        border-radius: 81% 19% 50% 50% / 32% 57% 43% 68%;
+        border-radius: 68% 32% 47% 53% / 25% 74% 26% 75%;
     }
     50%{
-        border-radius: 85% 15% 85% 15% / 18% 74% 26% 82%;
+        border-radius: 80% 20% 39% 61% / 43% 80% 20% 57%;
     }
     75%{
-        border-radius: 82% 18% 90% 10% / 17% 84% 16% 83%; 
+        border-radius: 67% 33% 59% 41% / 74% 65% 35% 26%; 
     }
     100%{
-        border-radius: 36% 64% 18% 82% / 34% 44% 56% 66%;
+        border-radius: 48% 52% 70% 30% / 33% 49% 51% 67%;
     }
 }

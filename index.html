@@ -1,22 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <title>Dixit vala - Android developer, Full stack java developer</title>
 </head>
-<body>
-<!-- ==========================================================       NAV       ================================================================ -->
 
-    <header>
+<body>
+    <!-- ==========================================================       NAV       ================================================================ -->
+
+    <header id="home">
         <nav>
             <div class="heading">
-                <h2>Dixit Vala</h2>
+                <h2>Dixit</h2>
             </div>
             <div class="nav-links">
                 <ul>
-                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="#home">HOME</a></li>
                     <li><a href="about.html">ABOUT</a></li>
                     <li><a href="service.html">SERVICE</a></li>
                     <li><a href="hireme.html">HIRE ME</a></li>
@@ -25,21 +27,32 @@
         </nav>
     </header>
 
-<!-- =========================================================       Hero       =============================================================== -->
+    <!-- =========================================================       Hero       =============================================================== -->
 
-<section class="hero">
+    <section class="hero">
 
-    <div class="introText">
-        <h2 class="head">I'm Dixit <span class="vala">Vala</span></h2>
-        <p class="para">This is my portfolio website to showes all details, works and some projects that i have bulit.</p>
-        <a href="resume.pdf" id="btn">Download CV</a>
-    </div>
+        <div class="introText">
+            <h6 class="greet">Hello,</h6>
+            <h2 class="head">I'm<span class="dixit"> Dixit</span> Vala</h2>
+            <p class="para">I am passionate <span id="element"></span></p>
+            <a href="resume.pdf" target="new" id="btn">Download CV</a>
+        </div>
 
-    <div class="introImg">
-        <img src="./img/imgcrop.png"/>
-        <div class="shape"></div>
-    </div>
-</section>
+        <div class="introImg">
+            <div class="img"></div>
+            <div class="shape"></div>
+        </div>
+    </section>
 
 </body>
+<script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+
+<script>
+    var typed = new Typed('#element', {
+        strings: ['Backend Develpment', 'Android Develpment', 'Cyber Security'],
+        typeSpeed: 60,
+        loop: true
+    });
+</script>
+
 </html>
